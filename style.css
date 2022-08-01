@@ -1,103 +1,131 @@
-/*
-dark-bg: #1f2937
-white-bg: #f9faf8
-gray-bg: #e5e7eb
-blue-bg: #3882f6
-fonts 18 24 36 48
-*/
-:root{  --clr-dark-bg: #1f2937;
-        --clr-white-bg: #f9faf8;
-        --clr-gray-bg: #e5e7eb;
-        --clr-blue-bg: #3882f6;}
-        --ckr-darkgray: gray;
-html{ box-sizing: border-box; font-family: sans-serif;}
-.larger{ font-size: 3rem;/*48px*/ font-weight: 900;}
-.large{ font-size: 2.25rem;/*36px*/ font-weight: bolder;}
-.medium{ font-size: 1.5rem;/*24px*/}
-.small{ font-size: 1.125rem;/*18px*/}
-ul{ padding: 0;}
-li{ display: inline; list-style-type: none;}
-a{color: var(--clr-gray-bg); text-decoration: none;}
-.dark{background-color: var(--clr-dark-bg);}
-.blue{background-color: var(--clr-blue-bg);}
-.white{background-color: var(--clr-white-bg);}
-.gray{background-color: var(--clr-gray-bg);}
-.darkgray{background-color: gray;}
-.fdark{color: var(--clr-dark-bg);}
-.fwhite{color: var(--clr-white-bg);}
-.fgray{color: var(--clr-gray-bg);}
+:root{  --clr-dark: #1f2937;
+        --clr-white: #f9faf8;
+        --clr-gray: #e5e7eb;
+        --clr-blue: #3882f6;
+        --clr-darkgray: #8e8e8f;
+
+        --fs-biggest:1.8rem;
+        --fs-bigger:1.35rem;
+        --fs-big:.9rem;
+        --fs-small:.675rem;
+        /* 
+        --fs-biggest:3rem;
+        --fs-bigger:2.25rem;
+        --fs-big:1.5rem;
+        --fs-small:1.125rem;
+        */
+        
+    }
+
+/* this code is for the cutom properties which will used in the designing process*/
+
+/* this code here sets the border and fonts */
+/* the code below are utility class for font sizes */
+.font-biggest{ font-size: var(--fs-biggest);/*48px*/}
+.font-bigger{font-size: var(--fs-bigger);/*36px*/}
+.font-big{ font-size: var(--fs-big);/*24px*/}
+.font-small{ font-size: var(--fs-small);/*18px*/}
+/*  the code below are utility class for background color */
+.bg-dark{background-color: var(--clr-dark);}
+.bg-blue{background-color: var(--clr-blue);}
+.bg-white{background-color: var(--clr-white);}
+.bg-gray{background-color: var(--clr-gray);}
+.bg-darkgray{background-color: var(--clr-darkgray);}
+/* the code below are utility class for  */
+.fdark{color: var(--clr-dark);}
+.fwhite{color: var(--clr-white);}
+.fgray{color: var(--clr-gray);}
+.fdarkgray{color: var(--clr-darkgray);}
+/* other utility classes */
 .txt-align-center{text-align: center;}
 .bold{font-weight: bolder;}
+/* the nav that uses list */
+ul{  margin: 0 0;}
+li{list-style-type: none; text-align: right;}
+a{color: var(--clr-gray); text-decoration: none;}
+/* the button */
 .btn{
-    color: var(--clr-white-bg);
-    background-color: var(--clr-blue-bg);
-    font-weight: 600;
-    text-align: center;
-    border-radius: .25rem;
-    padding: .15em 1em;}
-header, footer, .action, .action-pad{
-    padding: 0rem 6rem;
+    background-color: var(--clr-blue);
+    border: none;
+    border-radius: .25em;
+    padding: .1em 1.25em;
 }
-.information, .body{
-    padding: 0rem 12rem;
-}
-footer, .action-pad, .body{
-    padding-block: 2rem;
-}
-.inf-block{
-    border: .125rem solid var(--clr-blue-bg) ;
-    border-radius: .25rem;
-}
-.action-call, .action-sign, .header-body-des-title, .header-body-des-inf, .body-phrase, .body-thor{
+* p{
     padding: 0;
     margin: 0;
 }
-
-
-
-header{
-    padding-bottom: 4rem;
+html{
+    box-sizing: border-box;
 }
-.header-head{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 4rem;
-}
-.header-body{
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-}
-.header-body-des{
-    flex: 1 1 0;
-}
-.header-body-img{
-    flex: 1 1 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.inf-grid{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+body{
+    margin-inline: auto;
+    width: min(100%,75rem);
 }
 .inf-block{
-    height: 10rem;
+    border: .3rem solid black;
+    padding: min(2%,2.5rem);
+   
+    border-radius: 1rem;
 }
-
-
+header, footer, .action{
+    padding-inline: min(5%);
+}
+.information, .body{
+    padding-inline: min(10%);
+}
 .action-pad{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 1.5rem;
-    margin-block: 2rem;
+    border-radius: .5em;
+    padding: min(3%,2rem) min(2%,2rem);
 }
 .action-btn{
-    border: .125rem solid var(--clr-white-bg);
+    border: .125rem solid var(--clr-white);
+    margin:  min(3%,2rem) 0 0 0;
 }
+.header-btn{
+    margin:  min(3%,2rem) 0;
+}
+.information, .body, .action, footer{
+    padding-block: 5%;
+}
+.inf-title{
+    margin-bottom: 1em;
+}
+.body-thor{
+    text-align: right;
+    padding-right: min(5%, 3rem);
+}
+.body-phrase{
+    text-align: center;
+}
+
+
+/* layout mobile */
+header,{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: min(1vh,5rem);
+}
+
+.split.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.header-body-des{
+    text-align: center;
+}
+.action-pad{
+    text-align: center;
+}
+.inf-grid{
+    display: flex;
+    gap: min(2%,2rem);
+}
+.inf-block{
+    min-height: 4rem;
+}
+
 
 
