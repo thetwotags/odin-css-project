@@ -8,7 +8,7 @@
         --fs-bigger:1.35rem;
         --fs-big:.9rem;
         --fs-small:.675rem;
-        /* 
+        /* this code is for  big
         --fs-biggest:3rem;
         --fs-bigger:2.25rem;
         --fs-big:1.5rem;
@@ -67,7 +67,7 @@ body{
    
     border-radius: 1rem;
 }
-header, footer, .action{
+.header, .nav, footer, .action{
     padding-inline: min(5%);
 }
 .information, .body{
@@ -98,34 +98,64 @@ header, footer, .action{
     text-align: center;
 }
 
-
-/* layout mobile */
-header,{
+/* layout for mobile */
+.header{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: min(1vh,5rem);
-}
-
-.split.header{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: min(5%, 2rem);
 }
-.header-body-des{
+.nav,span{
     text-align: center;
-}
-.action-pad{
-    text-align: center;
+    padding-bottom: min(10%,2rem);
 }
 .inf-grid{
-    display: flex;
-    gap: min(2%,2rem);
+    display: block;
 }
-.inf-block{
-    min-height: 4rem;
+/* layout for laptop */
+
+@media only screen and (min-width: 60rem){
+    :root{
+        --fs-biggest:3rem;
+        --fs-bigger:2.25rem;
+        --fs-big:1.5rem;
+        --fs-small:1.125rem;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: min(5%, 2rem);
+    }
+    li{
+        display: inline;
+    }
+    .nav,span{
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        gap: 2rem;
+    }
+    .header-body-des, .header-body-img{
+        flex: 1 1 0;
+    }
+    .inf-grid{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .action-pad{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .action-btn{
+        margin:  0;
+    }
 }
+
+
+
 
 
 
